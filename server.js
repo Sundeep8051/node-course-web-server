@@ -28,6 +28,13 @@ app.get('/about',(req,res)=>{
     });
 });
 
+app.get('/projects',(req,res)=>{
+    res.render('projects.hbs',{
+        heading:'Projects page',
+        pageDetails: 'This page contains details about different projects'
+    });
+});
+
 app.get('/badRequest',(req,res)=>{
     res.send({
         errorMessage : "Bad Request"
